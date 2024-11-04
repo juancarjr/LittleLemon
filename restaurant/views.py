@@ -13,10 +13,8 @@ import json
 def index(request):
     return render(request, 'index.html', {})
 
-
 def about(request):
     return render(request, 'about.html')
-
 
 def menu(request):
     menu_data = Menu.objects.all()
@@ -50,7 +48,7 @@ def bookings(request):
                 name=data['first_name'],
                 reservation_date=data['reservation_date'],
                 reservation_slot=data['reservation_slot'],
-                # no_of_guests=data['no_of_guests'],
+                no_of_guests=data['no_of_guests'],
             )
             booking.save()
         else:
