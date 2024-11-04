@@ -76,7 +76,7 @@
         for (item of data) {
             console.log(item.fields);
             reserved_slots.push(item.fields.reservation_slot);
-            bookings = `<p>${item.fields.name} - ${formatTime(item.fields.reservation_slot)}</p>`;
+            bookings += `<p>${item.fields.name} - ${formatTime(item.fields.reservation_slot)}</p>`;
         }
 
         /* Step 12: Part four  */
